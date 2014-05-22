@@ -22,6 +22,8 @@
 		F84626C6192E232B001A44B4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F84626AA192E232B001A44B4 /* CoreData.framework */; };
 		F84626CE192E232B001A44B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F84626CC192E232B001A44B4 /* InfoPlist.strings */; };
 		F84626D0192E232B001A44B4 /* Thousand_WordsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F84626CF192E232B001A44B4 /* Thousand_WordsTests.m */; };
+		F84626DA192E2528001A44B4 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F84626D9192E2528001A44B4 /* Storyboard.storyboard */; };
+		F84626DD192E2619001A44B4 /* TWAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F84626DC192E2619001A44B4 /* TWAlbumTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		F84626CB192E232B001A44B4 /* Thousand WordsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Thousand WordsTests-Info.plist"; sourceTree = "<group>"; };
 		F84626CD192E232B001A44B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F84626CF192E232B001A44B4 /* Thousand_WordsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Thousand_WordsTests.m; sourceTree = "<group>"; };
+		F84626D9192E2528001A44B4 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		F84626DB192E2619001A44B4 /* TWAlbumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWAlbumTableViewController.h; sourceTree = "<group>"; };
+		F84626DC192E2619001A44B4 /* TWAlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWAlbumTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +120,9 @@
 		F84626AC192E232B001A44B4 /* Thousand Words */ = {
 			isa = PBXGroup;
 			children = (
-				F84626B5192E232B001A44B4 /* TWAppDelegate.h */,
-				F84626B6192E232B001A44B4 /* TWAppDelegate.m */,
+				F84626D9192E2528001A44B4 /* Storyboard.storyboard */,
+				F84626DB192E2619001A44B4 /* TWAlbumTableViewController.h */,
+				F84626DC192E2619001A44B4 /* TWAlbumTableViewController.m */,
 				F84626BB192E232B001A44B4 /* Images.xcassets */,
 				F84626B8192E232B001A44B4 /* Thousand_Words.xcdatamodeld */,
 				F84626AD192E232B001A44B4 /* Supporting Files */,
@@ -127,6 +133,8 @@
 		F84626AD192E232B001A44B4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F84626B5192E232B001A44B4 /* TWAppDelegate.h */,
+				F84626B6192E232B001A44B4 /* TWAppDelegate.m */,
 				F84626AE192E232B001A44B4 /* Thousand Words-Info.plist */,
 				F84626AF192E232B001A44B4 /* InfoPlist.strings */,
 				F84626B2192E232B001A44B4 /* main.m */,
@@ -231,6 +239,7 @@
 			files = (
 				F84626B1192E232B001A44B4 /* InfoPlist.strings in Resources */,
 				F84626BC192E232B001A44B4 /* Images.xcassets in Resources */,
+				F84626DA192E2528001A44B4 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +260,7 @@
 			files = (
 				F84626B3192E232B001A44B4 /* main.m in Sources */,
 				F84626B7192E232B001A44B4 /* TWAppDelegate.m in Sources */,
+				F84626DD192E2619001A44B4 /* TWAlbumTableViewController.m in Sources */,
 				F84626BA192E232B001A44B4 /* Thousand_Words.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
