@@ -3,6 +3,7 @@
 //  Thousand Words
 
 #import "TWPhotosCollectionViewController.h"
+#import "TWPhotoCollectionViewCell.h"
 
 @interface TWPhotosCollectionViewController ()
 
@@ -37,8 +38,9 @@
 {
     static NSString *CellIdentifier = @"Photo Cell";
     
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    TWPhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     cell.backgroundColor = [UIColor whiteColor];
+    cell.imageView.image = [UIImage imageNamed:@"astronaut.jpg"];
     
     return cell;
 }
