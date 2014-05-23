@@ -4,6 +4,7 @@
 
 #import "TWAlbumTableViewController.h"
 #import "Album.h"
+#import "TWCoreDataHelper.h"
 
 @interface TWAlbumTableViewController () <UIAlertViewDelegate>
 
@@ -43,13 +44,12 @@
     
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Album"];
     fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES]];
-    
-    id delegate = [[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext *context = [delegate managedObjectContext];
-    
+//    These lines no longer required, as use TWCoreDataHelper managedObjectContext instead
+//    id delegate = [[UIApplication sharedApplication] delegate];
+//    NSManagedObjectContext *context = [delegate managedObjectContext];
     NSError *error = nil;
     
-    NSArray *fetchedAlbums = [context executeFetchRequest:fetchRequest error:&error];
+    NSArray *fetchedAlbums = [[TWCoreDataHelper managedObjectContext] executeFetchRequest:fetchRequest error:&error];
     
     self.albums = [fetchedAlbums mutableCopy];
     
@@ -75,8 +75,8 @@
 
 - (Album *)albumWithName:(NSString *)name
 {
-    id delegate = [[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext *context = [delegate managedObjectContext];
+//  Line refactored to use helper class
+    NSManagedObjectContext *context = [TWCoreDataHelper managedObjectContext];
     
     Album *album = [NSEntityDescription insertNewObjectForEntityForName:@"Album" inManagedObjectContext:context];
     album.name = name;

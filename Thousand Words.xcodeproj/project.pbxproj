@@ -25,6 +25,7 @@
 		F84626DA192E2528001A44B4 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F84626D9192E2528001A44B4 /* Storyboard.storyboard */; };
 		F84626DD192E2619001A44B4 /* TWAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F84626DC192E2619001A44B4 /* TWAlbumTableViewController.m */; };
 		F84626E0192E3564001A44B4 /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = F84626DF192E3564001A44B4 /* Album.m */; };
+		F848FAE5192F59F9006D9A47 /* TWCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F848FAE4192F59F9006D9A47 /* TWCoreDataHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		F84626DC192E2619001A44B4 /* TWAlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWAlbumTableViewController.m; sourceTree = "<group>"; };
 		F84626DE192E3564001A44B4 /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
 		F84626DF192E3564001A44B4 /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
+		F848FAE3192F59F9006D9A47 /* TWCoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCoreDataHelper.h; sourceTree = "<group>"; };
+		F848FAE4192F59F9006D9A47 /* TWCoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCoreDataHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,10 +129,12 @@
 				F84626D9192E2528001A44B4 /* Storyboard.storyboard */,
 				F84626DB192E2619001A44B4 /* TWAlbumTableViewController.h */,
 				F84626DC192E2619001A44B4 /* TWAlbumTableViewController.m */,
-				F84626BB192E232B001A44B4 /* Images.xcassets */,
-				F84626B8192E232B001A44B4 /* Thousand_Words.xcdatamodeld */,
+				F848FAE3192F59F9006D9A47 /* TWCoreDataHelper.h */,
+				F848FAE4192F59F9006D9A47 /* TWCoreDataHelper.m */,
 				F84626DE192E3564001A44B4 /* Album.h */,
 				F84626DF192E3564001A44B4 /* Album.m */,
+				F84626BB192E232B001A44B4 /* Images.xcassets */,
+				F84626B8192E232B001A44B4 /* Thousand_Words.xcdatamodeld */,
 				F84626AD192E232B001A44B4 /* Supporting Files */,
 			);
 			path = "Thousand Words";
@@ -268,6 +273,7 @@
 				F84626DD192E2619001A44B4 /* TWAlbumTableViewController.m in Sources */,
 				F84626E0192E3564001A44B4 /* Album.m in Sources */,
 				F84626BA192E232B001A44B4 /* Thousand_Words.xcdatamodeld in Sources */,
+				F848FAE5192F59F9006D9A47 /* TWCoreDataHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +470,7 @@
 				F84626D5192E232B001A44B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F84626D6192E232B001A44B4 /* Build configuration list for PBXNativeTarget "Thousand WordsTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +479,7 @@
 				F84626D8192E232B001A44B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
