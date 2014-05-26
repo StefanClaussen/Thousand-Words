@@ -30,6 +30,7 @@
 		F848FAED192F7AB6006D9A47 /* astronaut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F848FAEC192F7AB6006D9A47 /* astronaut.jpg */; };
 		F8C5BEDA193348EC001B1DEB /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C5BED9193348EC001B1DEB /* Photo.m */; };
 		F8C5BEDD193348EC001B1DEB /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C5BEDC193348EC001B1DEB /* Album.m */; };
+		F8C5BEE119334B8E001B1DEB /* TWPictureDataTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C5BEE019334B8E001B1DEB /* TWPictureDataTransformer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		F8C5BED9193348EC001B1DEB /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		F8C5BEDB193348EC001B1DEB /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
 		F8C5BEDC193348EC001B1DEB /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
+		F8C5BEDF19334B8E001B1DEB /* TWPictureDataTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWPictureDataTransformer.h; sourceTree = "<group>"; };
+		F8C5BEE019334B8E001B1DEB /* TWPictureDataTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWPictureDataTransformer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +196,8 @@
 				F8C5BEDC193348EC001B1DEB /* Album.m */,
 				F8C5BED8193348EC001B1DEB /* Photo.h */,
 				F8C5BED9193348EC001B1DEB /* Photo.m */,
+				F8C5BEDF19334B8E001B1DEB /* TWPictureDataTransformer.h */,
+				F8C5BEE019334B8E001B1DEB /* TWPictureDataTransformer.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -296,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F84626B3192E232B001A44B4 /* main.m in Sources */,
+				F8C5BEE119334B8E001B1DEB /* TWPictureDataTransformer.m in Sources */,
 				F848FAE8192F7045006D9A47 /* TWPhotosCollectionViewController.m in Sources */,
 				F848FAEB192F7707006D9A47 /* TWPhotoCollectionViewCell.m in Sources */,
 				F8C5BEDA193348EC001B1DEB /* Photo.m in Sources */,
