@@ -33,7 +33,13 @@
                             <outlet property="delegate" destination="d2J-m8-o8h" id="sVx-1v-lkl"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="trZ-Bt-uaY"/>
+                    <navigationItem key="navigationItem" id="trZ-Bt-uaY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="dhy-B2-rCO">
+                            <connections>
+                                <action selector="cameraBarButtonItemPressed:" destination="d2J-m8-o8h" id="C3c-2Y-iY7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="71A-DV-7vR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

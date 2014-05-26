@@ -61,4 +61,6 @@
 }
 */
 
+- (IBAction)cameraBarButtonItemPressed:(UIBarButtonItem *)sender {
+}
 @end
