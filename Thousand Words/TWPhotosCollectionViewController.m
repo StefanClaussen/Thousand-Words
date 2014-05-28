@@ -40,10 +40,18 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    
     NSSet *unorderedPhotos = self.album.photos;
     NSSortDescriptor *dateDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES];
     NSArray *sortedPhotos = [unorderedPhotos sortedArrayUsingDescriptors:@[dateDescriptor]];
     self.photos = [sortedPhotos mutableCopy];
+    
+    [self.collectionView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
