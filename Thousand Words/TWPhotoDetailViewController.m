@@ -1,12 +1,9 @@
 //
 //  TWPhotoDetailViewController.m
 //  Thousand Words
-//
-//  Created by Stefan Claussen on 27/05/2014.
-//  Copyright (c) 2014 One foot after the other. All rights reserved.
-//
 
 #import "TWPhotoDetailViewController.h"
+#import "Photo.h"
 
 @interface TWPhotoDetailViewController ()
 
@@ -29,6 +26,13 @@
     // Do any additional setup after loading the view.
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    
+    self.imageView.image = self.photo.image;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -46,9 +50,16 @@
 }
 */
 
-- (IBAction)addFilterButtonPressed:(UIButton *)sender {
+- (IBAction)addFilterButtonPressed:(UIButton *)sender
+{
+    
 }
 
-- (IBAction)deleteButtonPressed:(UIButton *)sender {
+- (IBAction)deleteButtonPressed:(UIButton *)sender
+{
+    [[self.photo managedObjectContext] deleteObject:self.photo];
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
+
 @end

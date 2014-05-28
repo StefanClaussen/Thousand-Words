@@ -27,7 +27,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="deM-dv-4zT" kind="push" id="zI1-gb-sfn"/>
+                                    <segue destination="deM-dv-4zT" kind="push" identifier="Detail Segue" id="zI1-gb-sfn"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
