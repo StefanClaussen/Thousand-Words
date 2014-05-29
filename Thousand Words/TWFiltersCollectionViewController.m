@@ -92,6 +92,8 @@
     
     UIImage *finalImage = [UIImage imageWithCGImage:cgImage];
     
+    NSLog(@"Look at all this data %@", UIImagePNGRepresentation(finalImage));
+    
     return finalImage;
 }
 
