@@ -1,18 +1,24 @@
 //
 //  TWFiltersCollectionViewController.m
 //  Thousand Words
-//
-//  Created by Stefan Claussen on 29/05/2014.
-//  Copyright (c) 2014 One foot after the other. All rights reserved.
-//
 
 #import "TWFiltersCollectionViewController.h"
+#import "TWPhotoCollectionViewCell.h"
+#import "Photo.h"
 
 @interface TWFiltersCollectionViewController ()
+
+@property (strong, nonatomic) NSMutableArray *filters;
 
 @end
 
 @implementation TWFiltersCollectionViewController
+
+-(NSMutableArray *)filters
+{
+    if (!_filters) _filters = [[NSMutableArray alloc]init];
+    return _filters;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +39,24 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UICollectionView DataSource
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Photo Cell";
+    
+    TWPhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor whiteColor];
+    cell.imageView.image = self.photo.image;
+    
+    return cell;
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return [self.filters count];
 }
 
 /*
