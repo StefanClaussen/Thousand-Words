@@ -113,6 +113,25 @@
     return [self.filters count];
 }
 
+#pragma mark - UICollectionView Delegate 
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    TWPhotoCollectionViewCell *selectedCell = (TWPhotoCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    
+    self.photo.image = selectedCell.imageView.image;
+    
+    NSError *error = nil;
+    
+    if (![[self.photo managedObjectContext] save:&error])
+    {
+        //Handle error
+        NSLog(@"%@", error);
+    }
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 /*
 #pragma mark - Navigation
 
