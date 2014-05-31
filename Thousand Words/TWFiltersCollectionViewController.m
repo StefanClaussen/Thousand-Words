@@ -92,8 +92,6 @@
     
     UIImage *finalImage = [UIImage imageWithCGImage:cgImage];
     
-    NSLog(@"Look at all this data %@", UIImagePNGRepresentation(finalImage));
-    
     return finalImage;
 }
 
@@ -125,7 +123,7 @@
     return [self.filters count];
 }
 
-#pragma mark - UICollectionView Delegate 
+#pragma mark - UICollectionView Delegate
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -133,26 +131,29 @@
     
     self.photo.image = selectedCell.imageView.image;
     
-    NSError *error = nil;
-    
-    if (![[self.photo managedObjectContext] save:&error])
-    {
-        //Handle error
-        NSLog(@"%@", error);
+    if (self.photo.image) {
+        
+        NSError *error = nil;
+        
+        if (![[self.photo managedObjectContext] save:&error])
+        {
+            //Handle error
+            NSLog(@"%@", error);
+        }
+        
+        [self.navigationController popViewControllerAnimated:YES];
     }
-    
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
