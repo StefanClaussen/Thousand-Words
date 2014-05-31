@@ -105,7 +105,17 @@
     
     TWPhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     cell.backgroundColor = [UIColor whiteColor];
-    cell.imageView.image = [self filteredImageFromImage:self.photo.image andFilter:self.filters[indexPath.row]];
+    
+    //create a queue, using c function dispatch_queue_create.  Line is C. "create string in c"
+    dispatch_queue_t filterQueue = dispatch_queue_create("filter queue", NULL);
+    //Push this queue onto another thread and do the bit of logic for our blocks.
+    dispatch_async(filterQueue, ^{
+        UIImage *filterImage = [self filteredImageFromImage:self.photo.image andFilter:self.filters[indexPath.row]];
+        //Can only do changes to the view on main thread.  Go back to main thread and change the view.
+        dispatch_async(dispatch_get_main_queue(), ^{
+            cell.imageView.image = filterImage;
+        });
+    });
     
     return cell;
 }
